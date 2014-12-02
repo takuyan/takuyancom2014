@@ -1,0 +1,98 @@
+.page
+  height: 100%
+  margin: 0 0 $margin
+  h2, h3
+    margin: 0 0 $margin-inner
+  h3
+    color: $text-color
+    font:
+      size: 130%
+  @media (max-width: 979px)
+    p
+      margin-top: 2em
+
+#eye-catch
+  background: url('/images/symphony.png') repeat
+  padding: (160px + $navbar-height)  0 160px
+  border-bottom: 1px $green solid
+  h1
+    margin: 0
+    text-align: center
+    color: $text-color
+    padding: 10px 0
+    text-shadow: 1px 1px 0 $sub-text-color
+    font:
+      size: 500%
+  @media (max-width: 979px)
+    h1
+      font-size: 340%
+  @media (max-width: 319px)
+    h1
+      font-size: 240%
+
+#about
+  .selfy
+    height: 50px
+
+  .messages
+    @extend .markdown
+    p
+      margin: 0 0 $margin-inner
+      line-height: 1.6em
+
+.list-skills, .list-work, .list-projects
+  @extend .list-unstyled
+  li, dt, dd
+    line-height: 2em
+    font:
+      size: 120%
+    &.comming-soon a
+      color: $disabled-color
+
+.list-skills a
+  color: $green
+
+.list-projects a
+  color: $blue
+
+.list-work a
+  color: $cyan
+
+.not_found
+  text-align: center
+  padding: 20px 0
+  margin: 0 0 50px
+  font-size: 600%
+  color: $cyan
+  &#nf1, &#nf2, &#nf3, &#nf4
+    font-size: 600%
+  &#nf1
+    margin-top: 30px
+    font-size: 900%
+    color: $cyan
+  &#nf2
+    color: $red
+  &#nf3
+    font-size: 900%
+    color: $green
+  &#nf4
+    color: $orange
+@media (max-width: 979px)
+  .not_found
+    font-size: 360%
+    &#nf1, &#nf2, &#nf3, &#nf4
+      font-size: 460%
+.next
+  text-align: center
+  margin: 20px 0
+
+#footer
+  text-align: center
+  line-height: 3em
+  color: $disabled-color
+  font:
+    family: $num-font
+
+::selection
+  background: $magenta
+  color: $base3

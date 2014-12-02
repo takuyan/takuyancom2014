@@ -1,0 +1,100 @@
+#eye-catch.page
+  %h1 www.takuyan.com
+
+.container
+  .row
+    .col-md-8.col-md-offset-2
+      #about.page
+        .page-header
+          .pull-right
+            %img{src: '/images/image.jpg', alt: 'takuyan', class: 'img img-circle selfy'}
+          %h2
+            About.me
+        
+        .messages
+          %p
+            新しいことと、仕組み作りが大好きです。
+            %br
+            じぶんの欲しいサービスを作るためにプログラムを書いています。
+          %p
+            ゼロからサービスを作ることが得意です。
+            %br
+            そのためサーバ管理からデザイン、プログラムをひと通り嗜んでいます。
+            %br
+            継続してメンテナンスするために自動テストを書いています。
+          %p
+            %strong 同じアイディアを持つひとが１００人、実際に作るひとが１０人、続けていけるひとが１人
+            という言葉が好きです。
+            %br
+            アイディアはそれだけではあまり価値は無く、作ってこそ価値があるものだと考えています。
+
+        %h3 得意なこと
+
+        %ul.list-skills
+          %li
+            新規サービスの企画・プロトタイプ作成
+          %li
+            %a{href: 'http://rubyonrails.org/', target: :_blank}
+              Ruby on Rails
+          %li
+            %a{href: 'http://getbootstrap.com', target: :_blank}
+              Twitter Bootstrap 
+            を利用したWebサイト構築
+          %li
+            %a{href: 'http://backbonejs.org', target: :_blank}
+              Backbone.js/Marionette.js
+            によるクライアントサイドの開発
+          %li
+            %a{href: 'http://aws.amazon.com/jp/', target: :_blank}
+              Amazon Web Services
+            を使ったLinuxサーバの構築
+
+      #projects.page
+        .page-header
+          %h2 Personal Project
+
+        %dl.list-projects
+          %dt
+            %a{href: "http://proofoflife.me", target: :_blank}
+              生存証明 - Proof of Life
+          %dd
+            ソーシャル・ネットワークやメールによる生存確認、及び、遺言配信サービス
+          %dt
+            %a{href: "http://xn--nckvadb2e8ayas2lma0gwe.com/", target: :_blank}
+              Business Model Canvas (beta)
+          %dd
+            ビジネスモデルキャンバスをWebで作成するサービス
+          %dt
+            %a{href: "http://kulku.herokuapp.com/", target: :_blank}
+              Kulku - 道案内を簡単に作るサービス
+          %dd
+            Google Street View を使って写真による道案内を簡単に作るサービス
+          %dt
+            %a{href: "http://gsuggest.herokuapp.com/", target: :_blank}
+              Google Suggest API 
+          %dd
+            検索キーワードをGoogle Suggestから抜き出すサービス
+
+      #works.page
+        .page-header
+          %h2 Work
+
+        %ul.list-work
+          %li.comming-soon
+            %a{href: "http://thebooth.io", target: :_blank}
+              the Booth.io - Comming Soon
+          %li
+            %a{href: "http://kakista.jp", target: :_blank}
+              かきスタ - Writing Studio
+          %li
+            %a{href: "http://houhou.info", target: :_blank}
+              方法諸説 - Houhou Shosetsu
+          %li
+            %a{href: "http://shichikasha.info", target: :_blank}
+              七花舎文庫 - Shichikasha Bunko
+
+      #contact.page
+        .page-header
+          %h2 Contact
+        %p
+          思うところがございましたら、contact[あっと]takuyan.com または、Twitterなどからご連絡ください。

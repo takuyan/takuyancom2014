@@ -1,0 +1,65 @@
+!!!
+%html{lang: :ja}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-type"}
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title takuyan.com
+    %meta{content: "ja", "http-equiv" => "content-language"}
+    %meta{content: "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no", name: "viewport"}
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "telephone=no", name: "format-detection"}
+    %meta{content: "yes", name: "apple-mobile-web-app-capable"}
+    = stylesheet_link_tag "main"
+    %script{src: "//code.jquery.com/jquery-2.1.1.min.js"}
+    = javascript_include_tag "all"
+    %link{href: "/images/favicon.png", rel: "shortcut icon", type: "image/x-icon"}
+    /[if lt IE 9]
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  %body
+    %nav.navbar.navbar-fixed-top.navbar-default{role: :navigation}
+      .container
+        .navbar-header
+          %button.navbar-toggle{type: :button, data: {toggle: "collapse", target: ".bs-navbar-collapse"}}
+            %span.sr-only Toggle navigation
+            %span.fa.fa-bar
+            %span.fa.fa-bar
+            %span.fa.fa-bar
+          %a.navbar-brand{href: "/"} www.takuyan.com
+        .collapse.navbar-right.navbar-collapse.bs-navbar-collapse{role: :navigation}
+          %ul.nav.navbar-nav
+            %li
+              %a{href: "http://blog.takuyan.com", rel: 'me', target: :_blank}
+                %i.fa.fa-rss-square
+                Blog
+            %li
+              %a{href: "http://twitter.com/#/katton", rel: "me", target: :_blank}
+                %i.fa.fa-twitter-square
+                Twitter
+            %li
+              %a{href: "https://github.com/takuyan", rel: "me", target: :_blank}
+                %i.fa.fa-github-square
+                Github
+            %li
+              %a{href: "http://facebook.com/takuyank", rel: "me", target: :_blank}
+                %i.fa.fa-facebook-square
+                Facebook
+            %li
+              %a{href: "http://takuyan.hatenablog.com/", rel: "me", target: :_blank}
+                %i.fa.fa-rss
+                Hatena Blog
+
+    = yield
+
+    #footer
+      %span &copy; #{Date.today.strftime("%Y")} Takuya Kato All Right Reserved.
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30952501-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
